@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+    background-color: #fffd7a;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+}
+.navigation {
+    position: fixed; /*to make navigation bar stick to top of page, even when scrolling*/
+    background-color: #ec0b96;
+    width: 100%;
+    height:50px;
+    
+}
+.navigation > .links {
+    list-style-type: none;
+    /* overflow: hidden;*/
+       
+}
+.links{
+    float: right; /*to keep the links on right of navigation */
+}
+.links li{
+    display:inline;
+    position: relative;
+}
+.navigation a {
+    color:yellow;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.navigation a:hover{
+    background-color: #720842;
+    color:#FFF;
+}
+/* styling banner image*/
+.banner-image {
+  background-image: url("banner.jpg");
+  height: 600px;
+}
+
+.banner-body {
+    background:rgba(243, 31, 162, 0.3);/* making banner image slightly opaque*/
+    height: 600px;/*making opaque banner cover same as banner image*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* text on top of banner image*/
+.tagline h1, h3 {
+    color:black;
+    text-align: center;
+    margin: 0;
+}
+
+.tagline h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
+.tagline h1::first-line{
+    font-size: 50px;
+}
+.tagline h3{
+    font-style:italic;
+    font-size:20px;
+}
+
+.content {
+    margin: 100px 0px;
+    text-align: center;
+    /*font-size: 30px;*/
+}
+
+.content .category {
+    text-align: center;
+    font-size: 30px;
+}
+.about p {
+    font-size: 25px;
+}
+
+
+/* styling for Our Dancers section*/
+
+
+.rowpic{
+    max-width:  1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+.col-3 {
+    float: left;
+    margin-bottom: 16px;
+    padding: 0 6px;
+    display: block;
+    width:25%;
+}
+
+.col-6 {
+    float: right;
+    margin-bottom: 16px;
+    padding: 10 6px;
+    display: block;
+    width:50%;
+}
+
+.box {
+    height: 400px;
+    padding:0 5px;
+    margin: 15px 15px;
+    text-align: center;
+    /*box-shadow: 0 4px 8px 0 #002;   gives shadow to box*/
+}
+
+.dancer-desc{
+    padding:0 16px;
+}
+
+.dancer-desc > h5{
+    font-size: 25px;
+    height: 40px;
+}
+.dancer-desc > p{
+    font-size:20px;
+    font-style:italic;
+}
+
+/* Clear floats */
+.dancer-desc::after, .rowpic::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.dancer-pic {
+    width:100%;
+    border-radius:50%;
+}
+
+
+/*styling portfolio gallery*/
+/* The grid: Three equal columns that floats next to each other */
+.gallery-row{
+    max-width:  1200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+.gallery-col {
+    float: left;    
+    padding: 0 6px;
+    width: 33.33%;
+}
+
+/* Style the images inside the grid */
+.gallery-col img {
+    width:100%;   
+}
+
+.gallery-col img:hover {
+    opacity: 1;
+}
+
+.row{
+    overflow:hidden;
+}
+
+.gallery-row{
+    overflow: hidden;
+    background-color: #360d19;
+}
+
+.gallery-box {
+   padding: 5px;
+   margin: 15px;
+}
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*styling contact us section*/
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: rgb(185, 105, 175);
+    color:#fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width:100%;
+}
+
+input[type=submit]:hover {
+    background-color: #000;
+}
+
+/* Style the container in contact section */
+.contact-container {
+    border-radius: 5px;
+    background-color: #fae35e;
+    padding: 10px;
+}
+/* style bottom navigation bar*/
+
+.bottom-nav {
+    background-color: #ec0b96;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.bottom-links{
+    list-style-type:none;
+}
+.bottom-links li{
+    display:inline;
+    padding: 10px;
+}
+
+.bottom-nav a{    
+    position:relative;
+    right:-30%;
+    text-decoration: none;
+    color:yellow;
+    
+}
+.bottom-nav a:hover{
+    background-color: #720842;
+    color:#FFF;
+}
+/* styling icon list*/
+.bottom-nav {
+    background-color: #ec0b96;
+    overflow: hidden;
+    position: relative;
+    
+
+}
+.display-icons{
+   overflow: hidden;
+   background-color: #ccc;
+   padding:5 px;
+}
+.icon-list{
+    list-style-type:none;
+    color:rgb(32, 2, 56);
+    text-align: center;
+}
+.icon-list li{
+    padding: 5px;
+    display: inline;
+}
+
+/*style footer*/
+footer {
+    padding: 10px;
+    background-color: #ce0a76;
+    text-align: center;
+    color: #FFF;
+    margin:0;
+}

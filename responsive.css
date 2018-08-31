@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+* *:before *:after{
+    box-sizing: inherit;
+}
+
+.row{
+    max-width:  1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.row::after{
+    content:"";
+    clear: both;
+    display: table;
+
+}
+
+.col-3, .col-4, .col-6, .col-12{
+    float: left;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 640px){
+    .col-3 {
+        width:25%;
+    }
+
+    .col-4{
+        width: 33.333333%
+    }
+
+    .col-6 {
+        width:50%;
+    }
+
+    .col-12 {
+        width:100%;
+    }
+    
+}
+/* when the screen is 650px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 650px) {
+    .links li {
+      display: block;
+      
+    }
+    .iconlist li{
+        display: block;
+    }
+}
+/* Dancers section*/
+@media screen and (max-width: 650px) {
+    .col-3 {
+      width: 100%;
+      display: block;
+    }
+  }
+
+ /* Contact section - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
